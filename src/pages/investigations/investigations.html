@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Investigations
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+
+  <ion-grid>
+    <ion-row *ngFor="let suspect of suspects">
+      <ion-col></ion-col>
+      <ion-col>{{suspect.name}}</ion-col>
+      <ion-col>ALIBI</ion-col>
+      <ion-col>
+        <ion-textarea placeholder=""></ion-textarea>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

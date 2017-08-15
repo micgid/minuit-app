@@ -1,0 +1,50 @@
+[
+        {
+                "name": "Choc Emotionnel",
+                "image": ""
+        },
+        {
+                "name": "Chute",
+                "image": ""
+        },
+        {
+                "name": "Coup de feu",
+                "image": ""
+        },
+        {
+                "name": "Coup porté",
+                "image": ""
+        },
+        {
+                "name": "Drogues",
+                "image": ""
+        },
+        {
+                "name": "Ecrasement",
+                "image": ""
+        },
+        {
+                "name": "Egorgement",
+                "image": ""
+        },
+        {
+                "name": "Etouffement",
+                "image": ""
+        },
+        {
+                "name": "Empoisonnement",
+                "image": ""
+        },
+        {
+                "name": "Noyade",
+                "image": ""
+        },
+        {
+                "name": "Poignardage",
+                "image": "couteau.jpg"
+        },
+        {
+                "name": "Strangulation",
+                "image": ""
+        }
+]

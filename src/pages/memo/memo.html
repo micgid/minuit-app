@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Memo
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page3">
+
+  <div padding>
+    <ion-segment [(ngModel)]="filter">
+      <ion-segment-button value="suspects">
+        Suspects ({{suspects?.length+2}})
+      </ion-segment-button>
+      <ion-segment-button value="mobiles">
+        Mobiles ({{mobiles?.length}})
+      </ion-segment-button>
+      <ion-segment-button value="mo">
+        Modes opératoires ({{mo?.length}})
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="filter">
+    <ion-list id="memo-list-suspect" *ngSwitchCase="'suspects'">
+      <ion-item *ngFor="let s of suspects">
+        <ion-avatar item-start *ngIf="s.image">
+          <img src="./assets/images/{{s.image}}">
+        </ion-avatar>
+        <ion-label>
+          {{s.name}}
+        </ion-label>
+        <ion-toggle color="positive" checked="false"></ion-toggle>
+        <ion-toggle color="secondary" checked="false"></ion-toggle>
+      </ion-item>
+      <ion-item id="memo-toggle17">
+        <ion-label>
+          Aucun (mobile=accident)
+        </ion-label>
+        <ion-toggle color="positive" checked="false"></ion-toggle>
+        <ion-toggle color="secondary" checked="false"></ion-toggle>
+      </ion-item>
+      <ion-item id="memo-toggle18">
+        <ion-label>
+          La victime (suicide)
+        </ion-label>
+        <ion-toggle color="positive" checked="false"></ion-toggle>
+        <ion-toggle color="secondary" checked="false"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="memo-list-mobiles" *ngSwitchCase="'mobiles'">
+      <ion-item id="memo-toggle11" *ngFor="let mobile of mobiles">
+        <ion-avatar item-start *ngIf="mobile.image">
+          <img src="./assets/images/{{mobile.image}}">
+        </ion-avatar>
+        <ion-label>
+          {{mobile.name}}
+        </ion-label>
+        <ion-toggle color="positive" checked="false"></ion-toggle>
+        <ion-toggle color="secondary" checked="false"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <ion-list id="memo-list-mobiles" *ngSwitchCase="'mo'">
+      <ion-item id="memo-toggle11" *ngFor="let m of mo">
+        <ion-avatar item-start *ngIf="m.image">
+          <img src="./assets/images/{{m.image}}">
+        </ion-avatar>
+        <ion-label>
+          {{m.name}}
+        </ion-label>
+        <ion-toggle color="positive" checked="false"></ion-toggle>
+        <ion-toggle color="secondary" checked="false"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Deductions
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4">
+
+  <div>
+    Rappel : les hypothèses 1 et 2 doivent différer pour chacun des 3 éléments d’enquête.
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>hypothèse</ion-col>
+      <ion-col col-4>1</ion-col>
+      <ion-col col-4>2</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>Coupable</ion-col>
+      <ion-col col-4>SELECT (50pts)</ion-col>
+      <ion-col col-4>SELECT (30pts)</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>Mobile</ion-col>
+      <ion-col col-4>SELECT (30pts)</ion-col>
+      <ion-col col-4>SELECT (20pts)</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>Mode opératoire</ion-col>
+      <ion-col col-12 col-md-4>
+        <ion-select [(ngModel)]="gaming">
+          <ion-option *ngFor="let m of mo" value="m">{{m}}</ion-option>
+        </ion-select>
+        (20pts)</ion-col>
+      <ion-col col-12 col-md-4>SELECT (10pts)</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div>
+    DANS LE CAS DES RÉVÉLATIONS, on compare également chaque hypothèse 1 (uniquement) du joueur faisant les révélations avec
+    celle des autres joueurs. Le score est alors ajusté comme suit : • Chaque hypothèse 1 erronée du joueur faisant les révélations
+    lui confère un malus (-10 pts) • Chaque hypothèse 1 exacte du joueur faisant les révélations confère aux autres un malus
+    (-5 pts) = ___
+  </div>
+
+  <div>SCORE FINAL : _____ points</div>
+</ion-content>

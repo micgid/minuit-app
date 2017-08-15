@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Joueur
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <img alt="title" src="./assets/images/titre2.jpg" />
+  <form id="joueur-form1">
+    <ion-item id="joueur-input2">
+      <ion-label>
+        Nom
+      </ion-label>
+      <ion-input type="text" placeholder="Nom"></ion-input>
+    </ion-item>
+    <ion-item id="joueur-input3">
+      <ion-label>
+        Enquête
+      </ion-label>
+      <ion-input type="number" placeholder="N°" [(ngModel)]="enqueteId" name="enqueteId"></ion-input>
+    </ion-item>
+    <ion-item id="joueur-textarea1" class="description">
+      <ion-label>
+        Note
+      </ion-label>
+      <ion-textarea placeholder=""></ion-textarea>
+    </ion-item>
+    <ion-item id="joueur-textarea1" class="description">
+        <ion-label>
+          Description
+        </ion-label>
+        <ion-textarea *ngIf="enquete" placeholder="" [(ngModel)]="enquete.description" name="description"></ion-textarea>
+      </ion-item>
+  </form>
+  <pre>{{enquete|json}}</pre>
+  <pre>{{enqueteList|json}}</pre>
+  <img alt="joueur" src="./assets/images/detective.jpg" />
+</ion-content>
