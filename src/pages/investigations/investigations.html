@@ -10,9 +10,19 @@
 </ion-header>
 <ion-content padding id="page5">
 
-  <ion-grid>
+  <div padding>
+    <ion-segment [(ngModel)]="filter">
+      <ion-segment-button value="suspects">
+        Suspects
+      </ion-segment-button>
+      <ion-segment-button value="lieux">
+        Lieux
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <ion-grid *ngIf="filter==='suspects'">
     <ion-row *ngFor="let suspect of suspects">
-      <ion-col></ion-col>
       <ion-col>{{suspect.name}}</ion-col>
       <ion-col>ALIBI</ion-col>
       <ion-col>
@@ -20,5 +30,21 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <ion-content *ngIf="filter==='lieux'">
+    <ion-item *ngFor="let lieu of lieux">
+      <ion-label>
+        {{lieu.id}}
+      </ion-label>
+      <ion-label>
+        {{lieu.name}}
+      </ion-label>
+      <ion-textarea placeholder=""></ion-textarea>
+      <button ion-fab mini>Small</button>
+      <ion-note item-end>
+        Joelle, Christophe
+      </ion-note>
+    </ion-item>
+  </ion-content>
 
 </ion-content>

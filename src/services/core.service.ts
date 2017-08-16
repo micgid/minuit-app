@@ -6,6 +6,7 @@ import "rxjs/Rx";
 import { Mobile } from "../models/mobile.model";
 import { ModeOperatoire } from "../models/mode-operatoire.model";
 import { Enquete } from "../models/enquete.model";
+import { Lieu } from "../models/lieu.model";
 
 @Injectable()
 export class CoreService {
@@ -30,6 +31,11 @@ export class CoreService {
 
         getModeOperatoires(): Observable<ModeOperatoire[]> {
                 return this.http.get('./assets/data/modeoperatoire.json')
+                .map((response: Response) => response.json());
+        }
+        
+        getLieux(): Observable<Lieu[]> {
+                return this.http.get('./assets/data/lieux.json')
                 .map((response: Response) => response.json());
         }
 }

@@ -2,18 +2,24 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { TabsControllerPage} from '../pages/tabs-controller/tabs-controller';
+import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+import { InvestigationsPage } from "../pages/investigations/investigations";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = TabsControllerPage;
+  rootPage: any = TabsControllerPage;
+
+  menuItems = [
+    { name: 'Accueil', image: "home", page: TabsControllerPage },
+    { name: 'Contact', image: "contacts", page: InvestigationsPage }
+  ]
 
   constructor(
-    platform: Platform, 
-    statusBar: StatusBar, 
+    platform: Platform,
+    statusBar: StatusBar,
     splashScreen: SplashScreen
   ) {
     platform.ready().then(() => {
@@ -23,5 +29,8 @@ export class MyApp {
       splashScreen.hide();
     });
   }
-    
+
+  openPage(page: string) {
+    this.navCtrl.setRoot(page);
+  }
 }

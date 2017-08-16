@@ -7,23 +7,10 @@
     </ion-toolbar>
   </ion-header>
   <ion-content id="side-menu21">
-    <ion-list id="menu-list1">
-      <ion-item color="none" id="menu-list-item4">
-        Item 1
-      </ion-item>
-      <ion-item color="none" id="menu-list-item8">
-        <ion-icon name="ionic" item-left></ion-icon>
-        Item
-      </ion-item>
-      <ion-item color="none" id="menu-list-item5">
-        Item 2
-      </ion-item>
-      <ion-item color="none" id="menu-list-item7">
-        Investigations
-      </ion-item>
-      <ion-item color="none" id="menu-list-item6">
-          <ion-icon name="contacts" item-left></ion-icon>
-        Contact
+    <ion-list id="menu-list1">      
+      <ion-item *ngFor="let p of menuItems" (click)="openPage(p.page)">
+        <ion-icon *ngIf="p.image" name="{{p.image}}" item-left></ion-icon>
+        {{p.name}}
       </ion-item>
     </ion-list>
   </ion-content>

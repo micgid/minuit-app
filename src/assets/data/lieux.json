@@ -1,0 +1,98 @@
+[
+        {
+                "id": 1,
+                "name": "Cabine ARMAND"
+        },
+        {
+                "id": 2,
+                "name": "Cabine BELLE"
+        },
+        {
+                "id": 3,
+                "name": "Cabine CHARLES"
+        },
+        {
+                "id": 4,
+                "name": "Cabine DANIEL"
+        },
+        {
+                "id": 5,
+                "name": "Cabine ÉLISE"
+        },
+        {
+                "id": 6,
+                "name": "Cabine FRANK"
+        },
+        {
+                "id": 7,
+                "name": "Cabine GEORGES"
+        },
+        {
+                "id": 8,
+                "name": "Cabine HÉLÈNE"
+        },
+        {
+                "id": 9,
+                "name": "Cabine IRMA"
+        },
+        {
+                "id": 10,
+                "name": "Cabine JACQUES"
+        },
+        {
+                "id": 11,
+                "name": "Cabine KRISTINA"
+        },
+        {
+                "id": 12,
+                "name": "Cabine LIONEL"
+        },
+        {
+                "id": 13,
+                "name": "Suite de luxe"
+        },
+        {
+                "id": 14,
+                "name": "Timonerie"
+        },
+        {
+                "id": 15,
+                "name": "Piscine"
+        },
+        {
+                "id": 16,
+                "name": "Piano-bar"
+        },
+        {
+                "id": 17,
+                "name": "Espace beauté"
+        },
+        {
+                "id": 18,
+                "name": "Boutiques"
+        },
+        {
+                "id": 19,
+                "name": "Casino"
+        },
+        {
+                "id": 20,
+                "name": "Grand-salon"
+        },
+        {
+                "id": 21,
+                "name": "Restaurant"
+        },
+        {
+                "id": 22,
+                "name": "Cabines passagers"
+        },
+        {
+                "id": 23,
+                "name": "Services"
+        },
+        {
+                "id": 24,
+                "name": "Cale"
+        }
+]
